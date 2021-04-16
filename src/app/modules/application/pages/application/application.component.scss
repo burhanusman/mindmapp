@@ -1,9 +1,27 @@
 div.mindmapp-application {
     height: 100%;
+    flex: 2;
     display: flex;
     flex-direction: column;
+}
 
-    mindmapp-map {
-        flex: 1;
-    }
+.mindmapp-new{
+    display: flex;
+}
+
+.main_part{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 100%;
+}
+
+mindmapp-form{
+    width: 100%;
+    flex:1;
+}
+
+mindmapp-map{
+    width: 100%;
+    flex:2;
 }

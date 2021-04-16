@@ -56,6 +56,7 @@
         "angular2-hotkeys": "^2.1.5",
         "hammerjs": "^2.0.8",
         "jspdf": "^1.5.3",
+        "match-sorter": "^6.3.0",
         "material-design-icons": "^3.0.1",
         "mmp": "0.2.18",
         "ngx-color-picker": "^9.0.0",

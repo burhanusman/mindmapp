@@ -1,0 +1,30 @@
+<div class="form">
+<!-- <p contenteditable="true" (contextmenu)="displayContextMenu($event); false" type="text" name ="nodename" [(ngModel)]="nodename" (keyup)="onKeyUp($event)"></p> -->
+<p contenteditable="true" (contextmenu)="displayContextMenu($event); false" [textContent]="nodename" (input)="nodename=$event.target.textContent" (keyup)="onKeyUp($event)">
+    {{nodename}}
+</p>
+
+<mindmapp-context-menu
+      *ngIf="rightClickMenuItems.length > 0 && isDisplayContextMenu"
+      [ngStyle]="getRightClickMenuStyle()"
+      [contextMenuItems]="rightClickMenuItems"
+      (onContextMenuItemClick)="handleMenuItemClick($event)"
+      (onChangeInSelectedItem)="changeNode($event)"
+    ></mindmapp-context-menu>
+<p>{{text}}</p>
+<!-- <button (click)="addNode()" > +++
+</button> -->
+<!-- <button (click)="clickTest()" [title]="'TOOLTIPS.ADD_NODE' | translate"
+            class="mat-elevation-z2 add-node"
+            mat-mini-fab>
+        <mat-icon aria-label="Example icon-button with a heart icon" color="primary">add</mat-icon>
+</button> -->
+<!-- <mat-form-field appearance="fill">
+    <mat-label>Select Node</mat-label>
+    <mat-select [(ngModel)]="selectedNodeId" name="food">
+      <mat-option *ngFor="let nodeid of nodeIds" [value]="nodeid.id">
+        {{nodeid.id}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
+</div>

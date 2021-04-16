@@ -174,7 +174,7 @@ export class MmpService {
                 branch: this.branchColors[children % this.branchColors.length]
             }
         }
-
+        console.log(properties);
         this.currentMap.addNode(properties)
     }
 
@@ -242,8 +242,8 @@ export class MmpService {
     /**
      * Return the children of the current node.
      */
-    public nodeChildren (): Array<any> {
-        return this.currentMap.nodeChildren()
+    public nodeChildren (id?:string): Array<any> {
+        return this.currentMap.nodeChildren(id)
     }
 
     /**

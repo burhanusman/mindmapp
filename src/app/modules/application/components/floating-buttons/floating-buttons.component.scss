@@ -1,7 +1,7 @@
 div.floating-buttons {
     .mat-mini-fab {
         z-index: 2;
-        position: absolute;
+        position: relative;
     }
 
     .add-node, .remove-node,
